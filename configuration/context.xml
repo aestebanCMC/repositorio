@@ -32,10 +32,10 @@
     -->
 	
     <Resource name="jdbc/piadmin1"
-              url="jdbc:mysql://%{PIADMINDB_SERVICE_HOST}:%{PIADMINDB_SERVICE_PORT}/%{MYSQL_DATABASE}"
+              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:${env.PIADMINDB_SERVICE_PORT}/${env.MYSQL_DATABASE}"
               driverClassName="com.mysql.jdbc.Driver"
-              username="%{MYSQL_USER}"
-              password="%{MYSQL_PASSWORD}"
+              username="${env.MYSQL_USER}"
+              password="${env.MYSQL_PASSWORD}"
               auth="Container"
               type="javax.sql.DataSource"
               maxActive="20"
@@ -44,10 +44,10 @@
               />
 			  
 	<Resource name="jdbc/piadmin2"
-              url="jdbc:mysql://%{PIADMINDB_SERVICE_HOST}:%{PIADMINDB_SERVICE_PORT}/%{MYSQL_DATABASE}"
+              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:${env.PIADMINDB_SERVICE_PORT}/${env.MYSQL_DATABASE}"
               driverClassName="com.mysql.jdbc.Driver"
-              username="%{MYSQL_USER}"
-              password="%{MYSQL_PASSWORD}"
+              username="${env.MYSQL_USER}"
+              password="${env.MYSQL_PASSWORD}"
               auth="Container"
               type="javax.sql.DataSource"
               maxActive="20"
