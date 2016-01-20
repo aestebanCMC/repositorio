@@ -36,7 +36,7 @@ public class JdbcTomcatDAO implements TomcatDAO {
             try {
                 return (DataSource) initialContext.lookup(System.getenv("DB_JNDI"));
             } catch (NameNotFoundException e) {
-                Context envContext = (Context) initialContext.lookup("java:comp/env");  // Tomcat places datasources inside java:comp/env
+                Context envContext = (Context) initialContext.lookup("java:comp/env/");  // Tomcat places datasources inside java:comp/env
                 return (DataSource) envContext.lookup(System.getenv("DB_JNDI"));
             }
         } catch (NamingException e) {
