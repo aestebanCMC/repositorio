@@ -32,7 +32,7 @@
     -->
 	
     <Resource name="jdbc/piadmin1"
-              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:${env.PIADMINDB_SERVICE_PORT}/${env.MYSQL_DATABASE}"
+              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:3306/${env.MYSQL_DATABASE}"
               driverClassName="com.mysql.jdbc.Driver"
               username="${env.MYSQL_USER}"
               password="${env.MYSQL_PASSWORD}"
@@ -44,7 +44,7 @@
               />
 			  
 	<Resource name="jdbc/piadmin2"
-              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:${env.PIADMINDB_SERVICE_PORT}/${env.MYSQL_DATABASE}"
+              url="jdbc:mysql://${env.PIADMINDB_SERVICE_HOST}:3306/${env.MYSQL_DATABASE}"
               driverClassName="com.mysql.jdbc.Driver"
               username="${env.MYSQL_USER}"
               password="${env.MYSQL_PASSWORD}"
